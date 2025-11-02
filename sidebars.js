@@ -2,6 +2,8 @@
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+import pokeapiSidebar from './docs/pokeapi-api/sidebar.ts';
+
 /**
  * Creating a sidebar enables you to:
  - create an ordered group of docs
@@ -23,6 +25,15 @@ const sidebars = {
     'LoveLitReviews',
     'currency-exchange',
     'pokeapi-quick-start',
+    {
+      type: 'category',
+      label: 'PokeAPI Reference',
+      link: {
+        type: 'doc',
+        id: 'pokeapi-api/pokeapi',
+      },
+      items: pokeapiSidebar,
+    },
   ],
 
   // But you can create a sidebar manually

@@ -51,6 +51,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          docItemComponent: '@theme/ApiItem', // Derived from docusaurus-theme-openapi
         },
         blog: {
           showReadingTime: true,
@@ -73,6 +74,27 @@ const config = {
       }),
     ],
   ],
+
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'openapi',
+        docsPluginId: 'classic',
+        config: {
+          pokeapi: {
+            specPath: 'static/openapi/pokeapi.yaml',
+            outputDir: 'docs/pokeapi-api',
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+        },
+      },
+    ],
+  ],
+
+  themes: ['docusaurus-theme-openapi-docs'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
