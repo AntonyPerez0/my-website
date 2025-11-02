@@ -10,9 +10,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'Sara Perez — Docs & Projects',
+  tagline: 'Full-Stack Software Engineer — docs, notes, and project writeups',
+  favicon: 'img/Saralogo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://sara-golbek-docs.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'sara-golbek', // GitHub org/user name (update if different).
+  projectName: 'personal-docs', // Repo name (update if different).
 
   onBrokenLinks: 'throw',
 
@@ -83,22 +83,23 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'Sara Perez',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Sara Perez Logo',
+          src: 'img/Saralogo.svg',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/contact', label: 'Contact', position: 'right'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://www.linkedin.com/in/saragolbek',
+            label: 'LinkedIn',
             position: 'right',
           },
         ],
@@ -109,6 +110,10 @@ const config = {
           {
             title: 'Docs',
             items: [
+              {
+                label: 'Project Documentation',
+                to: '/docs/intro',
+              },
               {
                     label: 'PokeAPI Quick Start',
                     to: '/docs/pokeapi-quick-start',
@@ -140,13 +145,17 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/saragolbek',
+              },
+              {
+                label: 'Email',
+                href: 'mailto:golbeksara@gmail.com',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Sara Perez. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
